@@ -27,7 +27,6 @@ exports.getTodo = async (req,res) =>{
                 redisArgs.push(JSON.stringify(temp[i][1]))
             }
             await client.del('todos');
-            console.log("are these empty todos?",todos);
             if(todos.length!=0){
                 await client.hSet("todos",redisArgs,(error,reply)=>handleCallback(error,reply));
             }
