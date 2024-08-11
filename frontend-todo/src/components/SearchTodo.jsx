@@ -1,6 +1,5 @@
 
 function SearchTodo({isSearch, setIsSearch,searchValue,setSearchValue}){
-    console.log(isSearch)
     function handleChange(event){
         if((event.target.value).length>0){
             setIsSearch(true);

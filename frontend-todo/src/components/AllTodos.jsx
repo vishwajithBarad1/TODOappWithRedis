@@ -18,7 +18,6 @@ function AllTodos ({title, setTitle, description, setDescription, todos,getTodos
     }
 
     async function handleComplete(id){
-        console.log("this is ID:",id);
         await axios.put(`http://localhost:4000/todos?id=${id}`,{
             task:"complete"
         });
