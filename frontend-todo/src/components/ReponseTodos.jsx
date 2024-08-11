@@ -3,7 +3,7 @@ function ResponseTodos({searchValue,title, setTitle, description, setDescription
     let resTodos = []
     console.log("this is todos:",todos);
     for(let i=0;i<todos.length;i++){
-        if(todos[i]["title"].includes(searchValue) || todos[i]["description"].includes(searchValue)){
+        if(todos[i]["title"].toLowerCase().includes(searchValue.toLowerCase()) || todos[i]["description"].toLowerCase().includes(searchValue.toLowerCase())){
             resTodos.push(todos[i])
         }
     }
